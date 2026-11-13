@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#c5487b">
-<title>禁煙外来 動機づけ面接シミュレーター</title>
+<title>禁煙外来シミュレーター</title>
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
 <meta name="description" content="返答を選ぶと、患者さんが声で答える。禁煙外来の初診を題材にした分岐型ロールプレイ。">
@@ -83,14 +83,14 @@ html.embed footer{display:none}
 .speaking .skipbtn{margin:0 0 0 10px;padding:4px 14px;min-height:36px;font-size:15px;line-height:1.4;font-weight:700;background:#fff;color:var(--accent);border:1px solid var(--accent);border-radius:8px;text-align:center}
 
 </style></head><body>
-<header><h1 id="h-title">禁煙外来 動機づけ面接シミュレーター</h1><div class="sub">返答を選ぶと、患者さんが声で答えます</div></header>
+<header><h1 id="h-title">禁煙外来シミュレーター</h1><div class="sub">返答を選ぶと、患者さんが声で答えます</div></header>
 <main>
  <aside><div class="who"><img class="av" id="pav-s" src="img/patient_neutral.webp" alt=""><div><b id="pname"></b><small id="pshort"></small></div></div><img id="pav" class="bigav" src="img/patient_neutral.webp" alt=""><div class="profile" id="profile"></div></aside>
  <section id="chat"><div id="log"></div><div id="choices"></div></section>
  <section class="side"><div id="meters"></div><div class="counts" id="counts"></div></section>
 </main>
 <footer>音声は Google Gemini 3.8 Flash TTS、イラストは Gemini 2.5 Flash Image で生成しました。 © 2026 Masahide Koda（東北大学 公衆衛生学分野）</footer>
-<div id="overlay"><div class="card"><img class="hero" id="t-hero" src="img/title.webp" alt=""><h2 id="t-title">禁煙外来 動機づけ面接シミュレーター</h2><p id="t-intro"></p><button id="startbtn" disabled>面接をはじめる</button><p class="small" style="margin-top:12px">音声が流れます。スピーカーまたはイヤホンをご用意ください。</p></div></div>
+<div id="overlay"><div class="card"><img class="hero" id="t-hero" src="img/title.webp" alt=""><h2 id="t-title">禁煙外来シミュレーター</h2><p id="t-intro"></p><button id="startbtn" disabled>面接をはじめる</button><p class="small" style="margin-top:12px">音声が流れます。スピーカーまたはイヤホンをご用意ください。</p></div></div>
 <script>
 // 分類・チェック項目・メーター・表情の規則・場面名は、すべて scenario.json から読む。
 // 評価は「◎の数」と「状態フラグ」だけで決める。メーター、乱数、前回の結果は評価に使わない。
